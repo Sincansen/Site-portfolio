@@ -1,0 +1,27 @@
+//- Все примеси в этом файле должны начинаться c имени блока (activity)
+
+mixin activity(imgUrl, name, descr, url)
+
+  //- Параметры которые принимают:
+  //-   imgUrl    {string} - ссылка на картинку
+  //-   name    {string} - заголовок
+  //-   descr    {string} - описание
+  //-   url    {string} - ссылка на страницу
+  //- Вызов:
+        +activity('ссылка на картинку', 'заголовок', 'описание', 'ссылка на страницу')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' activity--' + modsList[i].trim();
+      }
+    }
+
+  a.activity(href=url)(class=allMods)&attributes(attributes)
+    .activity__inner
+      img.activity__picture(src=imgUrl)
+      h3.activity__title= name
+      p.activity__descr= descr

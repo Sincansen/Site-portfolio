@@ -1,0 +1,22 @@
+extends ../pug/layout.pug
+
+block meta
+  title Портфолио
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+block nav
+  +main-nav('10')
+
+block content
+  .portfolio
+    .portfolio__activity
+      h2.activity--title Портфолио
+      p.activity--text Я ещё только учусь и развиваюсь
+      .activity__list
+        +activity('img/activity_photo.svg', 'Фото', 'Фотографирую всё','pages/photo')
+        +activity('img/activity_video.svg','Видео','Монтирую короткие видео','pages/video')
+        +activity('img/activity_design.svg', 'Дизайн', 'Создаю полиграфию', 'pages/design')
+        +activity('img/activity_web.svg', 'WEB', 'Создаю интернет', 'pages/web')

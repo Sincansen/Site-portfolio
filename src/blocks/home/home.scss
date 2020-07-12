@@ -1,0 +1,32 @@
+// В этом файле должны быть стили для БЭМ-блока home, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.home {
+
+  $block-name:                &; // #{$block-name}__element
+  text-align: center;
+
+
+  &__welcome {
+    background-color: #E5FFF5;
+
+  }
+
+  &__about {
+    background-color: #F4FFF6;
+  }
+
+  &__blog {
+    background-color: #E5FFF5;
+  }
+
+  &__activity {
+    background-color: #F4FFF6;
+  }
+}
+.welcome{
+  &__photo {
+      width: 30%;
+    }
+}

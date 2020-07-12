@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (social)
+
+mixin social(imgUrl, url)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +social('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' social--' + modsList[i].trim();
+      }
+    }
+
+  .social(href=url)(class=allMods)&attributes(attributes)
+    a.social__inner(href=url)
+      img.social__picture(src=imgUrl)
