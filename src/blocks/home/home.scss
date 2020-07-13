@@ -10,19 +10,58 @@
 
   &__welcome {
     background-color: #E5FFF5;
-
+    padding-top: 2em;
+    padding-bottom: 1em;
   }
 
   &__about {
     background-color: #F4FFF6;
+    padding-top: 0.5em;
+    padding-bottom: 3em;
+
+    a {
+      text-align: center;
+      min-width: 25%;
+      min-height: 5%;
+      padding: 1%;
+      background-color: #D9E8D3;
+
+      &:hover {
+        background-color: $gray-lightest;
+      }
+    }
+
+    p {
+      padding-bottom: 1em;
+    }
   }
 
   &__blog {
     background-color: #E5FFF5;
+    padding-top: 0.5em;
+    padding-bottom: 3em;
+
+    a {
+      text-align: center;
+      min-width: 25%;
+      min-height: 5%;
+      padding: 1%;
+      background-color: #D9E8D3;
+
+      &:hover {
+        background-color: $gray-lightest;
+      }
+    }
+
+    p {
+      padding-bottom: 1em;
+    }
   }
 
   &__activity {
     background-color: #F4FFF6;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
   }
 }
 .welcome{

@@ -18,14 +18,14 @@ block content
     .home__about
       h2.about__title Что это?
       p.about__text--new Это мой личный сайт, на котором собрана информация обо мне
-      button.about__button Узнайте о том, что я делаю
+      a.about__button.button-blog(href='#') Узнайте о том, что я делаю  <!-- Надо разобраться с кнопками и классами. Чтобы при редактировании одного класса менялись сразу все кнопки -->
     .home__blog
-      h2.blog--title Блог
-      p.blog--text Тут истории из моей жизни
-      button.blog--button Прочитать истории
+      h2.blog__title Блог
+      p.blog__text Тут истории из моей жизни
+      a.blog__button(href='#')  Прочитать истории
     .home__activity
-      h2.activity--title Моя деятельность
-      p.activity--text Я ещё только учусь и развиваюсь
+      h2.activity__title Моя деятельность
+      p.activity__text Я ещё только учусь и развиваюсь
       .activity__list
         +activity('img/activity_photo.svg', 'Фото', 'Фотографирую всё','pages/photo')
         +activity('img/activity_video.svg','Видео','Монтирую короткие видео','pages/video')
